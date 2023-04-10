@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x1=0;
+    int x2=1;
+    int soma=0;
+    int k;
+    printf ("Digite um numero e descubra se ele faz parte de Fibonacci: ");
+    scanf ("%d", &k);
+    
+    while (soma<k) 
+    {
+    soma=x1+x2;
+    x1=x2;
+    x2=soma;
+    }
+    
+    if (soma==k)
+    {
+        printf("\n %d faz parte de Fibonacci.", k);
+    }
+    
+    else
+    {
+        printf("\n %d nao faz parte de Fibonacci.", k);
+    }
+    
+    return 0;
+}

@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+void inverter(char vet[]){
+    int i, aux, fim, tam = strlen(vet);
+
+    fim = tam - 1;
+    
+    for(i = 0; i < tam/2; i++){
+        aux = vet[i];
+        vet[i] = vet[fim];
+        vet[fim] = aux;
+        fim--;
+    }
+}
+
+int main(){
+
+    char str[30] = {"Teste de Inverter"};
+
+    printf("%s\n", str);
+    inverter(str);
+    printf("%s\n", str);
+
+    return 0;
+}
